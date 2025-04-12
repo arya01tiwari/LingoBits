@@ -1,0 +1,89 @@
+{
+    "status": "SUCCESS",
+    "data": {
+      "testId": "oihq2eo9h1029921-210-20112",
+      "questions": [
+        {
+          "id": 1,
+          "sentence": "The company's _____________ approach to product development _____________ customer feedback at every stage, _____________ user satisfaction and _____________ a loyal consumer base.",
+          "options": ["Incorporated", "User-centric", "Enhancing", "Cultivating"],
+          "correct": ["User-centric", "Incorporated", "Enhancing", "Cultivating"],
+          "blanks": 4
+        },
+        {
+          "id": 2,
+          "sentence": "The _____________ musical performance _____________ elements from various genres, _____________ the audience with its unique sound and _____________ critical acclaim from industry experts.",
+          "options": ["Captivating", "Eclectic", "Garnering", "Blended"],
+          "correct": ["Eclectic", "Blended", "Captivating", "Garnering"],
+          "blanks": 4
+        },
+        {
+          "id": 3,
+          "sentence": "The scientist's _____________ research on quantum computing _____________ new possibilities for data processing, _____________ traditional limitations and _____________ the way for groundbreaking technological advancements.",
+          "options": ["Pioneering", "Paving", "Overcoming", "Opened up"],
+          "correct": ["Pioneering", "Opened up", "Overcoming", "Paving"],
+          "blanks": 4
+        },
+        {
+          "id": 4,
+          "sentence": "The _____________ implementation of machine learning algorithms in medical diagnostics _____________ early detection of diseases, _____________ treatment outcomes and _____________ the workload of healthcare professionals.",
+          "options": ["Improving", "Reducing", "Enabled", "Revolutionary"],
+          "correct": ["Revolutionary", "Enabled", "Improving", "Reducing"],
+          "blanks": 4
+        },
+        {
+          "id": 5,
+          "sentence": "The _____________ security breach at the tech giant _____________ millions of users' data, _____________ concerns about online privacy and _____________ calls for stricter regulations.",
+          "options": ["Raising", "Massive", "Prompting", "Compromised"],
+          "correct": ["Massive", "Compromised", "Raising", "Prompting"],
+          "blanks": 4
+        },
+        {
+          "id": 6,
+          "sentence": "The _____________ educational reform _____________ a more inclusive curriculum, _____________ equal opportunities for all students and _____________ the overall quality of public schooling.",
+          "options": ["Comprehensive", "Enhancing", "Implemented", "Promoting"],
+          "correct": ["Comprehensive", "Implemented", "Promoting", "Enhancing"],
+          "blanks": 4
+        },
+        {
+          "id": 7,
+          "sentence": "The company's _____________ commitment to sustainability _____________ eco-friendly practices across all departments, _____________ its carbon footprint and _____________ a model for corporate responsibility.",
+          "options": ["Implemented", "Setting", "Unwavering", "Reducing"],
+          "correct": ["Unwavering", "Implemented", "Reducing", "Setting"],
+          "blanks": 4
+        },
+        {
+          "id": 8,
+          "sentence": "The _____________ implementation of artificial intelligence in healthcare _____________ patient outcomes, _____________ the workload of medical professionals and _____________ new avenues for personalized treatment.",
+          "options": ["Opening", "Improved", "Gradual", "Reducing"],
+          "correct": ["Gradual", "Improved", "Reducing", "Opening"],
+          "blanks": 4
+        },
+        {
+          "id": 9,
+          "sentence": "The _____________ festival _____________ artists from diverse backgrounds, _____________ cultural exchange and _____________ a platform for emerging talents to showcase their work.",
+          "options": ["Providing", "Brought together", "Promoting", "International"],
+          "correct": ["International", "Brought together", "Promoting", "Providing"],
+          "blanks": 4
+        },
+        {
+          "id": 10,
+          "sentence": "The _____________ implementation of smart city technologies _____________ urban efficiency and sustainability, _____________ quality of life for residents and _____________ a model for future urban development.",
+          "options": ["Enhancing", "Improved", "Providing", "Widespread"],
+          "correct": ["Widespread", "Improved", "Enhancing", "Providing"],
+          "blanks": 4
+        }
+      ]
+    },
+    "message": "Questions fetched successfully",
+    "activity": {
+      "id": "3c576049-9ea9-4b5c-9fb7-4b316adaaaa0",
+      "userId": "c6ad08a5-67ac-4a4d-aa3a-16d7fe91d51c",
+      "type": "VERSANT_CATEGORY_TEST",
+      "coinType": "DEDUCTED",
+      "coins": 20,
+      "description": "Used Versant Category Test",
+      "createdAt": "2025-04-10T06:42:21.041Z"
+    }
+  }
+  
