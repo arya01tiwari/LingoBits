@@ -6,26 +6,26 @@ interface TimerProps {
 }
 
 const Timer: React.FC<TimerProps> = ({ duration, onTimeUp }) => {
-  const [timeLeft, setTimeLeft] = useState(duration);
+  const [seconds, setSeconds] = useState(duration);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 1) {
-          clearInterval(timer);
+    setSeconds(duration);
+    const interval = setInterval(() => {
+      setSeconds(prev => {
+        if (prev === 1) {
+          clearInterval(interval);
           onTimeUp();
-          return 0;
         }
         return prev - 1;
       });
     }, 1000);
 
-    return () => clearInterval(timer);
-  }, []);
+    return () => clearInterval(interval);
+  }, [duration]);
 
   return (
-    <div className="text-lg text-center font-semibold text-red-600">
-      ⏱ Time Left: {timeLeft}s
+    <div className="text-sm text-gray-600">
+      Time Left: <span className="font-bold">{seconds}s</span>
     </div>
   );
 };

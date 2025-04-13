@@ -1,21 +1,29 @@
-// pages/QuizPage.tsx
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Quiz from "./Quiz";
+import Quiz from "../components/Quiz"; // <- adjust path if needed
 import { Question } from "../types";
 
 const QuizPage = () => {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchQuestions = async () => {
-      const response = await fetch("http://localhost:4000/questions");
-      const data = await response.json();
-      setQuestions(data);
+      try {
+        const response = await fetch("http://localhost:3000/questions");
+        const data = await response.json();
+        console.log("Fetched questions:", data); // ✅ Log to verify
+        setQuestions(data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching questions:", error);
+        setLoading(false);
+      }
     };
+
     fetchQuestions();
   }, []);
 
@@ -44,7 +52,7 @@ const QuizPage = () => {
     }
   };
 
-  if (questions.length === 0) return <div>Loading...</div>;
+  if (loading) return <div className="text-center text-xl mt-10">Loading...</div>;
 
   return (
     <Quiz
