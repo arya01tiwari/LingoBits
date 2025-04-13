@@ -13,7 +13,7 @@ const QuizPage = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch("http://localhost:3000/questions");
+        const response = await fetch("http://localhost:3001/questions");
         const data = await response.json();
         console.log("Fetched questions:", data); // ✅ Log to verify
         setQuestions(data);
