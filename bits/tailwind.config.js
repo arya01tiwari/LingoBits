@@ -1,17 +1,16 @@
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: "class", // Important for toggle-based dark mode
   content: [
-    "./bits/index.html",  // For index.html in the bits folder
-    "./bits/src/**/*.{js,ts,jsx,tsx}",  // For React components in the bits/src folder
+    "./index.html", // Ensures Tailwind looks at index.html
+    "./src/**/*.{js,ts,jsx,tsx}", // Ensures Tailwind looks at all JS/TS/JSX/TSX files
   ],
   theme: {
     extend: {
       colors: {
         darkbg: "#0f172a", // Optional: customize dark backgrounds
-      }
+      },
     },
   },
   plugins: [],
-}
-
-
+};
