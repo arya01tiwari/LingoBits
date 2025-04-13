@@ -1,8 +1,8 @@
 export default {
   darkMode: "class", // Important for toggle-based dark mode
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./bits/index.html",
+    "./bits/src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -13,3 +13,4 @@ export default {
   },
   plugins: [],
 }
+
