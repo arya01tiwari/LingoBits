@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Quiz from "../components/Quiz"; // <- adjust path if needed
+import Quiz from "../components/Quiz";
 import { Question } from "../types";
 
 const QuizPage = () => {
@@ -10,27 +10,24 @@ const QuizPage = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
+  const VITE_API_URL = import.meta.env.VITE_API_URL;
+
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch("http://localhost:3000/questions");
+        const response = await fetch(`${VITE_API_URL}/questions`);
         const data = await response.json();
-        console.log("Fetched questions:", data); // ✅ Log to verify
+        console.log("Fetched questions:", data);
         setQuestions(data);
-        setLoading(false);
       } catch (error) {
         console.error("Error fetching questions:", error);
+      } finally {
         setLoading(false);
       }
     };
 
     fetchQuestions();
-  }, []);
-  const VITE_API_URL = import.meta.env.VITE_API_URL;
-fetch(`${VITE_API_URL}/questions`)
-  .then((res) => res.json())
-  .then((data) => {setQuestions(data)});
-
+  }, [VITE_API_URL]);
 
   const handleAnswer = (selected: string[]) => {
     const currentQuestion = questions[currentIndex];
