@@ -26,8 +26,8 @@ const QuizPage = () => {
 
     fetchQuestions();
   }, []);
-  const API_URL = import.meta.env.VITE_API_URL;
-fetch(`${API_URL}/questions`)
+  const VITE_API_URL = import.meta.env.VITE_API_URL;
+fetch(`${VITE_API_URL}/questions`)
   .then((res) => res.json())
   .then((data) => {setQuestions(data)});
 
