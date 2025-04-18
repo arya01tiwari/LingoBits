@@ -13,7 +13,7 @@ const QuizPage = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch("http://localhost:3001/questions");
+        const response = await fetch("http://localhost:3000/questions");
         const data = await response.json();
         console.log("Fetched questions:", data); // ✅ Log to verify
         setQuestions(data);
@@ -26,6 +26,11 @@ const QuizPage = () => {
 
     fetchQuestions();
   }, []);
+  const API_URL = import.meta.env.VITE_API_URL;
+fetch(`${API_URL}/questions`)
+  .then((res) => res.json())
+  .then((data) => {setQuestions(data)});
+
 
   const handleAnswer = (selected: string[]) => {
     const currentQuestion = questions[currentIndex];
