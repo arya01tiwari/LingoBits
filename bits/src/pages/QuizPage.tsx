@@ -11,10 +11,11 @@ const QuizPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000"; // ✅ Fallback here
+     // ✅ Fallback here
 
     const fetchQuestions = async () => {
       try {
+        const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
         const response = await fetch(`${API_URL}/questions`);
         const data = await response.json();
         console.log("Fetched questions:", data);
