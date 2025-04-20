@@ -10,24 +10,24 @@ const QuizPage = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  const VITE_API_URL = import.meta.env.VITE_API_URL;
-
   useEffect(() => {
+    const API_URL = import.meta.env.VITE_API_URL; // ✅ Fallback here
+
     const fetchQuestions = async () => {
       try {
-        const response = await fetch(`${VITE_API_URL}/questions`);
+        const response = await fetch(`${API_URL}/questions`);
         const data = await response.json();
         console.log("Fetched questions:", data);
         setQuestions(data);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching questions:", error);
-      } finally {
         setLoading(false);
       }
     };
 
     fetchQuestions();
-  }, [VITE_API_URL]);
+  }, []);
 
   const handleAnswer = (selected: string[]) => {
     const currentQuestion = questions[currentIndex];
