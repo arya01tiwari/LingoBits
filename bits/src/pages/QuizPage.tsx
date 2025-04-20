@@ -11,7 +11,7 @@ const QuizPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const API_URL = import.meta.env.VITE_API_URL; // ✅ Fallback here
+    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000"; // ✅ Fallback here
 
     const fetchQuestions = async () => {
       try {
